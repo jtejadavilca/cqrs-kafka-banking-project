@@ -1,0 +1,20 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: account.cmd
+  data:
+    mongodb:
+#      uri: mongodb://r00t:p455w0rd.mongo@localhost:27017/bankingAccount?authSource=admin
+      host: localhost
+      port: 27017
+      database: bankingAccount
+      username: r00t
+      password: p455w0rd.mongo
+      authentication-database: admin
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
